@@ -2,11 +2,10 @@ def my_select(collection)
 i = 0 
 selected = []
 while i < collection.length 
-selected << yield
+ if yield(collection[i]) == true
+   
 end
 selected
 
 end
 
-my_select do |i|
-  
